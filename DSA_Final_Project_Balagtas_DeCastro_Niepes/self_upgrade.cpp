@@ -430,8 +430,64 @@ void checkDiary(const vector<DiaryEntry> &diary) {
 }
 
 void todaysChallenge() {
-    cout << "Today's challenge is to write a letter of gratitude to someone who has impacted your life positively.\n";
+    vector<string> challenges = {
+        "30-Minute Walk: Take a walk in your neighborhood or a nearby park.",
+        "Try a New Recipe: Cook a dish you've never made before.",
+        "Read a Chapter: Read a chapter from a book you’ve been meaning to start.",
+        "10-Minute Meditation: Spend 10 minutes meditating or practicing mindfulness.",
+        "Random Act of Kindness: Do something kind for a stranger.",
+        "Write a Letter: Write a letter or a heartfelt email to a friend or family member.",
+        "Learn a New Word: Learn and use a new word in conversation.",
+        "Practice Gratitude: Write down three things you’re grateful for.",
+        "Declutter: Clean and organize a small area of your home.",
+        "Try a New Exercise: Do a workout you’ve never tried before.",
+        "Draw or Paint: Create a piece of art.",
+        "Listen to a Podcast: Find and listen to a new podcast episode.",
+        "DIY Project: Start a small DIY project or craft.",
+        "Watch a Documentary: Watch a documentary on a topic you’re interested in.",
+        "Explore Nature: Visit a local park or nature reserve.",
+        "Journal: Spend 15 minutes journaling about your day or thoughts.",
+        "Learn a Skill: Watch a tutorial and learn a new skill (e.g., knitting, juggling).",
+        "No Screens: Spend an hour without any screens (phone, TV, computer).",
+        "Try a New Hobby: Start a new hobby or revisit an old one.",
+        "Language Practice: Learn basic phrases in a new language.",
+        "Photography: Take photos of interesting things you see throughout the day.",
+        "Visit a Museum: Explore a local museum or art gallery.",
+        "Board Games: Play a board game with family or friends.",
+        "Puzzles: Complete a puzzle (jigsaw, crossword, Sudoku).",
+        "Virtual Tour: Take a virtual tour of a famous landmark.",
+        "Cook for Someone: Prepare a meal for a friend or family member.",
+        "Dance Party: Have a solo dance party with your favorite music.",
+        "Read an Article: Read an interesting article on a topic you’re curious about.",
+        "Plant Something: Plant a flower, herb, or small garden.",
+        "Volunteer: Spend time volunteering for a local organization.",
+        "Mindfulness Walk: Take a walk and focus on the sights, sounds, and smells.",
+        "Movie Night: Watch a movie you’ve never seen before.",
+        "Compliment Someone: Give genuine compliments to three people.",
+        "DIY Spa Day: Treat yourself to a spa day at home.",
+        "Storytelling: Write a short story or poem.",
+        "Gratitude Jar: Start a gratitude jar and add a note each day.",
+        "Picnic: Have a picnic in your backyard or a local park.",
+        "Mindfulness Coloring: Spend time coloring in an adult coloring book.",
+        "Learn a Dance: Learn a dance routine from an online video.",
+        "Explore Local History: Research and visit a local historical site.",
+        "Try a New Drink: Make a new smoothie or coffee recipe.",
+        "Sing Karaoke: Sing your favorite songs with a karaoke app or YouTube.",
+        "Stargazing: Spend time stargazing and identifying constellations.",
+        "Mindful Eating: Eat a meal slowly, savoring each bite.",
+        "Write a Review: Write a review for a book, movie, or restaurant you enjoyed.",
+        "Digital Detox: Have a digital detox day with no social media.",
+        "Learn Origami: Make simple origami creations.",
+        "Memory Lane: Look through old photos and reminisce.",
+        "Podcasts Swap: Exchange podcast recommendations with a friend.",
+        "Morning Stretch: Start your day with a morning stretch routine."
+    };
+
+    srand(static_cast<unsigned int>(time(0))); // Seed the random number generator
+    int randomIndex = rand() % challenges.size();
+    cout << "Today's challenge: " << challenges[randomIndex] << endl;
 }
+
 
 void todaysReward() {
     cout << "Today's reward is to treat yourself to your favorite dessert!\n";
