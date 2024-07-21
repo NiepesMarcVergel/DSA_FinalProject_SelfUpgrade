@@ -233,17 +233,17 @@ void moodToday(vector<int> &moodRatings, const UserInfo &user) {
     moodRatings.push_back(mood);
 
     if (mood >= 1 && mood <= 3) {
-        cout << "Looks like you're feeling down today, no worries let us fix that together.\n\n";
+        cout << "\nLooks like you're feeling down today, no worries let us fix that together.\n\n";
         cout << "This might be some of the cause of your stress: \n";
         printMBTIFeedback(user.mbti);
     } else if (mood >= 4 && mood <= 6) {
-        cout << "Not bad but not the best of feels, huh? Now let us make that poker face into a big smile!\n\n";
+        cout << "\nNot bad but not the best of feels, huh? Now let us make that poker face into a big smile!\n\n";
         cout << "This might be some of the cause of your stress: \n";
         printMBTIFeedback(user.mbti);
     } else if (mood >= 7 && mood <= 10) {
-        cout << "Wow, now look at that happiness of yours!\n";
+        cout << "\nWow, now look at that happiness of yours!\n";
     } else {
-        cout << "Invalid mood rating.\n";
+        cout << "\nInvalid mood rating.\n";
     }
 }
 
@@ -404,7 +404,7 @@ void upliftMe(const UserInfo &user) {
 }
 
 void workout() {
-    cout << "Let's do a quick workout! Here are some exercises:\n";
+    cout << "\nLet's do a quick workout! Here are some exercises:\n";
     cout << "1. 20 push-ups\n";
     cout << "2. 30 squats\n";
     cout << "3. 15 burpees\n";
@@ -423,7 +423,7 @@ void writeDiary(vector<DiaryEntry> &diary) {
 }
 
 void checkDiary(const vector<DiaryEntry> &diary) {
-    cout << "Your Diary Entries:\n";
+    cout << "\nYour Diary Entries:\n";
     for (const auto &entry : diary) {
         cout << entry.date << ": " << entry.entry << endl;
     }
@@ -485,7 +485,7 @@ void todaysChallenge() {
 
     srand(static_cast<unsigned int>(time(0)));
     int randomIndex = rand() % challenges.size();
-    cout << "Today's challenge: " << challenges[randomIndex] << endl;
+    cout << "\nToday's challenge: " << challenges[randomIndex] << endl;
 }
 
 void todaysReward() {
@@ -544,7 +544,7 @@ void todaysReward() {
 
     srand(static_cast<unsigned int>(time(0))); 
     int randomIndex = rand() % rewards.size();
-    cout << "Today's reward: " << rewards[randomIndex] << endl;
+    cout << "T\noday's reward: " << rewards[randomIndex] << endl;
 }
 
 int main() {
@@ -583,10 +583,10 @@ int main() {
                 todaysReward();
                 break;
             case 8:
-                cout << "Exiting the program. Have a great day!\n";
+                cout << "\nExiting the program. Have a great day!\n";
                 break;
             default:
-                cout << "Invalid option. Please try again.\n";
+                cout << "\nInvalid option. Please try again.\n";
                 break;
         }
     } while (option != 8);
