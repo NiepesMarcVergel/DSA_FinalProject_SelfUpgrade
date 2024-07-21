@@ -228,7 +228,7 @@ void printMBTIFeedback(const string &mbti) {
 
 void moodToday(vector<int> &moodRatings, const UserInfo &user) {
     int mood;
-    cout << "Rate your mood today on a scale of 1 to 10: ";
+    cout << "\nRate your mood today on a scale of 1 to 10: ";
     cin >> mood;
     moodRatings.push_back(mood);
 
@@ -414,10 +414,10 @@ void workout() {
 
 void writeDiary(vector<DiaryEntry> &diary) {
     DiaryEntry newEntry;
-    cout << "Enter today's date (e.g., 2024-07-14): ";
+    cout << "\nEnter today's date (e.g., 2024-07-14): ";
     cin.ignore();
     getline(cin, newEntry.date);
-    cout << "Write your diary entry: ";
+    cout << "\nWrite your diary entry: ";
     getline(cin, newEntry.entry);
     diary.push_back(newEntry);
 }
@@ -544,7 +544,7 @@ void todaysReward() {
 
     srand(static_cast<unsigned int>(time(0))); 
     int randomIndex = rand() % rewards.size();
-    cout << "T\noday's reward: " << rewards[randomIndex] << endl;
+    cout << "\nToday's reward: " << rewards[randomIndex] << endl;
 }
 
 int main() {
