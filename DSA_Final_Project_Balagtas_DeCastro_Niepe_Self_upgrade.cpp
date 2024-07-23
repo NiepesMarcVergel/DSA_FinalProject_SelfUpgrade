@@ -76,7 +76,7 @@ void getUserInfo(UserInfo &user) {
     } 
 
     while (true) {
-        cout <<GREEN << "\n(o´ω`o) Enter your MBTI type (ISTJ, ISFJ, INFJ, INTJ, ISTP, ISFP, INFP, INTP, ESTP, ESFP, ENFP, ENTP, ESTJ, ESFJ, ENFJ, ENTJ): "<<RESET ;
+        cout <<GREEN << "(o´ω`o) Enter your MBTI type (ISTJ, ISFJ, INFJ, INTJ, ISTP, ISFP, INFP, INTP, ESTP, ESFP, ENFP, ENTP, ESTJ, ESFJ, ENFJ, ENTJ): "<<RESET ;
         getline(cin, user.MBTI);
         if (find(validMBTITypes.begin(), validMBTITypes.end(), user.MBTI) != validMBTITypes.end()) {
             break;
