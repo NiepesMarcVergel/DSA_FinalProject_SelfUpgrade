@@ -403,13 +403,73 @@ void upliftMe(const UserInfo &user) {
     }
 }
 
-void workout() {
-    cout << "\nLet's do a quick workout! Here are some exercises:\n";
-    cout << "1. 20 push-ups\n";
-    cout << "2. 30 squats\n";
-    cout << "3. 15 burpees\n";
-    cout << "4. 20 lunges\n";
-    cout << "5. 1-minute plank\n";
+void workout(const UserInfo &user) {
+    cout << "Let's do a quick workout! Here are some exercises:\n";
+    if (user.mbti == "ISTJ") {
+        cout << "Easy: Walking or hiking - allows for planning and structure.\n";
+        cout << "Moderate: Weight training - focuses on routines and discipline.\n";
+        cout << "Difficult: CrossFit - challenges with high-intensity, varied workouts.\n";
+    } else if (user.mbti == "ISFJ") {
+        cout << "Easy: Yoga - promotes relaxation and self-care.\n";
+        cout << "Moderate: Pilates - offers structure and mindful movement.\n";
+        cout << "Difficult: Swimming laps - a structured yet challenging full-body workout.\n";
+    } else if (user.mbti == "INFJ") {
+        cout << "Easy: Tai Chi - gentle, meditative movements.\n";
+        cout << "Moderate: Dance classes - creative expression with moderate intensity.\n";
+        cout << "Difficult: Trail running - combines nature with a challenging workout.\n";
+    } else if (user.mbti == "INTJ") {
+        cout << "Easy: Walking - provides time for contemplation and planning.\n";
+        cout << "Moderate: Cycling - structured, endurance-building activity.\n";
+        cout << "Difficult: HIIT (High-Intensity Interval Training) - maximizes efficiency and challenges.\n";
+    } else if (user.mbti == "ISTP") {
+        cout << "Easy: Rock climbing - engaging, problem-solving activity.\n";
+        cout << "Moderate: Martial arts - combines physical skill with strategic thinking.\n";
+        cout << "Difficult: Parkour - intense, skillful, and physically demanding.\n";
+    } else if (user.mbti == "ISFP") {
+        cout << "Easy: Nature walks - combines movement with appreciation of surroundings.\n";
+        cout << "Moderate: Dancing - expressive and physically engaging.\n";
+        cout << "Difficult: Surfing - challenging, adventurous, and immersive.\n";
+    } else if (user.mbti == "INFP") {
+        cout << "Easy: Gentle yoga - promotes inner peace and flexibility.\n";
+        cout << "Moderate: Running - provides a sense of freedom and reflection.\n";
+        cout << "Difficult: Trail running - combines nature with a physically demanding activity.\n";
+    } else if (user.mbti == "INTP") {
+        cout << "Easy: Walking - allows for mental wandering and reflection.\n";
+        cout << "Moderate: Bouldering - mentally and physically engaging.\n";
+        cout << "Difficult: Circuit training - varied exercises to keep the mind and body engaged.\n";
+    } else if (user.mbti == "ESTP") {
+        cout << "Easy: Team sports - combines social interaction with light exercise.\n";
+        cout << "Moderate: Kickboxing - energetic and engaging.\n";
+        cout << "Difficult: Competitive sports - high intensity and strategic.\n";
+    } else if (user.mbti == "ESFP") {
+        cout << "Easy: Group fitness classes - social and fun.\n";
+        cout << "Moderate: Dance classes - combines movement with entertainment.\n";
+        cout << "Difficult: Zumba or high-energy dance workouts - fun and challenging.\n";
+    } else if (user.mbti == "ENFP") {
+        cout << "Easy: Hiking with friends - social and adventurous.\n";
+        cout << "Moderate: Dance or aerobic classes - high-energy and engaging.\n";
+        cout << "Difficult: Adventure sports - combines excitement with physical challenge.\n";
+    } else if (user.mbti == "ENTP") {
+        cout << "Easy: Walking or light jogging - allows for mental stimulation.\n";
+        cout << "Moderate: Mixed martial arts - combines strategy with physical exertion.\n";
+        cout << "Difficult: Obstacle course races - challenging and engaging.\n";
+    } else if (user.mbti == "ESTJ") {
+        cout << "Easy: Brisk walking - structured and effective.\n";
+        cout << "Moderate: Strength training - disciplined and goal-oriented.\n";
+        cout << "Difficult: Boot camp classes - high intensity and structured.\n";
+    } else if (user.mbti == "ESFJ") {
+        cout << "Easy: Group walks - social and relaxing.\n";
+        cout << "Moderate: Aerobics classes - structured and communal.\n";
+        cout << "Difficult: Spin classes - challenging yet supportive environment.\n";
+    } else if (user.mbti == "ENFJ") {
+        cout << "Easy: Yoga - promotes balance and well-being.\n";
+        cout << "Moderate: Group fitness classes - social and motivating.\n";
+        cout << "Difficult: Triathlons - challenging and goal-oriented.\n";
+    } else if (user.mbti == "ENTJ") {
+        cout << "Easy: Walking or light jogging - provides time for strategic thinking.\n";
+        cout << "Moderate: Strength training - disciplined and goal-focused.\n";
+        cout << "Difficult: High-intensity interval training (HIIT) - maximizes efficiency and challenge.\n";
+    }
 }
 
 void writeDiary(vector<DiaryEntry> &diary) {
@@ -568,7 +628,7 @@ int main() {
                 upliftMe(user);
                 break;
             case 3:
-                workout();
+                workout(user);
                 break;
             case 4:
                 writeDiary(diary);
