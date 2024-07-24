@@ -3,12 +3,12 @@
 
 ## Table of Contents
 
-- [🎯 Project Overview](##project-overview)
-- [🌳 Branches](##branches)
-- [📈 Objective](##objective)
-- [📥 Database Management System](##database-management-system)
-- [⚙️ Technology Stack](##technology-stack)
-- [👷‍ Contributors](##contributors)
+- [🎯 Project Overview](#project-overview)
+- [🌳 Branches](#branches)
+- [📈 Objective](#objective)
+- [📥 Database Management System](#database-management-system)
+- [⚙️ Technology Stack](#technology-stack)
+- [👷‍ Contributors](#contributors)
 
 ## <a id = "project-overview"> 🎯 Project Overview </a>
 
